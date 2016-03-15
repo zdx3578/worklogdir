@@ -1,0 +1,21 @@
+ python neural_style.py  --content tl1/psb2.jpeg  --styles examples/2-style2.jpg  --output tl1/bb2.jpg   --iterations  120
+
+nohup   python neural_style.py --content /Users/lmj/Documents/t/ljsw3.jpg  --styles examples/2-style2.jpg  --output /Users/lmj/Documents/t/ljsw3.sty23.out.jpg  --iterations 240  --checkpoint-iterations 20  &
+
+top -d 7
+
+python neural_style.py  --content examples/1-content.jpg  --styles examples/2-style1.jpg  --output t1.jpg
+
+
+ 1899  /opt/practice/py-faster-rcnn/caffe-fast-rcnn/python/draw_net.py   --rankdir BT /opt/practice/py-faster-rcnn/models/VGG16/faster_rcnn_end2end/train.prototxt  ./VGG16-e2e.train.jpg
+
+ipython notebook --ip=0.0.0.0 --no-browser
+/home/ubuntu/.ipython/profile_default/ipython_notebook_config.py
+
+ kill   -9    `ps -ef|grep -i xvnc|grep -v grep  |awk '{print $2}'`
+
+
+
+ uptime |awk '{print $12}'
+ uptime |awk '{print $10}'
+pip show tensorflow
