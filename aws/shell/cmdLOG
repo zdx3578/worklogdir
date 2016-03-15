@@ -2,6 +2,8 @@
 
 nohup   python neural_style.py --content /Users/lmj/Documents/t/ljsw3.jpg  --styles examples/2-style2.jpg  --output /Users/lmj/Documents/t/ljsw3.sty23.out.jpg  --iterations 240  --checkpoint-iterations 20  &
 
+python neural_style.py --styles /Users/lmj/Documents/t/psb1.jpeg  --output /Users/lmj/Documents/t/out/pbs1.sty21.out.ite6.reverse.jpg --iterations 5  --content examples/2-style1.jpg   --checkpoint-iterations 2  --checkpoint-output /Users/lmj/Documents/t/outck/%s.jpg 
+
 top -d 7
 
 python neural_style.py  --content examples/1-content.jpg  --styles examples/2-style1.jpg  --output t1.jpg
