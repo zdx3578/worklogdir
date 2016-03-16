@@ -1,5 +1,5 @@
 
-
+sudo    cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 top -d 7
 
 nohup python neural_style.py --content /Users/lmj/Documents/t/psb1.jpeg --styles examples/2-style1.jpg --output /Users/lmj/Documents/t/out/pbs1.sty21.out.ite200 --iterations 200 --checkpoint-iterations 4 --checkpoint-output /Users/lmj/Documents/t/outck/pbs1.sty21.out.%s.jpg
