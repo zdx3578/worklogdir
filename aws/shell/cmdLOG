@@ -1,15 +1,11 @@
- python neural_style.py  --content tl1/psb2.jpeg  --styles examples/2-style2.jpg  --output tl1/bb2.jpg   --iterations  120
 
-nohup   python neural_style.py --content /Users/lmj/Documents/t/ljsw3.jpg  --styles examples/2-style2.jpg  --output /Users/lmj/Documents/t/ljsw3.sty23.out.jpg  --iterations 240  --checkpoint-iterations 20  &
-
-python neural_style.py --styles /Users/lmj/Documents/t/psb1.jpeg  --output /Users/lmj/Documents/t/out/pbs1.sty21.out.ite6.reverse.jpg --iterations 5  --content examples/2-style1.jpg   --checkpoint-iterations 2  --checkpoint-output /Users/lmj/Documents/t/outck/%s.jpg 
 
 top -d 7
 
-python neural_style.py  --content examples/1-content.jpg  --styles examples/2-style1.jpg  --output t1.jpg
+nohup python neural_style.py --content /Users/lmj/Documents/t/psb1.jpeg --styles examples/2-style1.jpg --output /Users/lmj/Documents/t/out/pbs1.sty21.out.ite200 --iterations 200 --checkpoint-iterations 4 --checkpoint-output /Users/lmj/Documents/t/outck/pbs1.sty21.out.%s.jpg
 
 
- 1899  /opt/practice/py-faster-rcnn/caffe-fast-rcnn/python/draw_net.py   --rankdir BT /opt/practice/py-faster-rcnn/models/VGG16/faster_rcnn_end2end/train.prototxt  ./VGG16-e2e.train.jpg
+/opt/practice/py-faster-rcnn/caffe-fast-rcnn/python/draw_net.py   --rankdir BT /opt/practice/py-faster-rcnn/models/VGG16/faster_rcnn_end2end/train.prototxt  ./VGG16-e2e.train.jpg
 
 ipython notebook --ip=0.0.0.0 --no-browser
 /home/ubuntu/.ipython/profile_default/ipython_notebook_config.py
