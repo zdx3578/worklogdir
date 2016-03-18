@@ -15,10 +15,10 @@ iterations=$3
 
 #programepath='/opt/practice/neural-style.me.fork'
 programepath='/Users/lmj/develop/neural-style.me.fork/'
-cd programepath
+cd $programepath
 
 # nohup 
-python neural_style.py --content $root'source/'$1   --styles $root'style/'$2   --output $root'out/'$1.$2.$3.jpg       --checkpoint-iterations 1 --checkpoint-output $root'outck/'$1.$2.%s.jpg   --iterations $3
+python neural_style.py --content $root'source/'$1   --styles $root'style/'$2   --output $root'out/'$1.$2.$3.jpg       --checkpoint-iterations 10 --checkpoint-output $root'outck/'$1.$2.%s.jpg   --iterations $3
 #&
 fi
 

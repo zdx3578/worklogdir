@@ -23,3 +23,7 @@ https://www.tensorflow.org/versions/r0.7/how_tos/using_gpu/index.html
 
 nohup python neural_style.py --content /opt/practice/neural-style.me.fork/data/source/kk/psb1.jpeg --styles /opt/practice/neural-style.me.fork/data/style/??? --output /opt/practice/neural-style.me.fork/data/out/kk/pbs1.sty21.out.ite200  --checkpoint-iterations 10 --checkpoint-output /opt/practice/neural-style.me.fork/data/outck/kk/pbs1.sty21.out.%s.jpg   --iterations 200
 
+
+git diff --word-diff=color
+
+
