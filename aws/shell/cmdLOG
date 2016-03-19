@@ -2,18 +2,19 @@
 sudo    cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 top -d 7
 
-nohup python neural_style.py --content /Users/lmj/Documents/t/psb1.jpeg --styles examples/2-style1.jpg --output /Users/lmj/Documents/t/out/pbs1.sty21.out.ite200 --iterations 200 --checkpoint-iterations 4 --checkpoint-output /Users/lmj/Documents/t/outck/pbs1.sty21.out.%s.jpg
-
 /opt/practice/py-faster-rcnn/caffe-fast-rcnn/python/draw_net.py   --rankdir BT /opt/practice/py-faster-rcnn/models/VGG16/faster_rcnn_end2end/train.prototxt  ./VGG16-e2e.train.jpg
+
 
 ipython notebook --ip=0.0.0.0 --no-browser
 /home/ubuntu/.ipython/profile_default/ipython_notebook_config.py
 
  kill   -9    `ps -ef|grep -i xvnc|grep -v grep  |awk '{print $2}'`
 
+
  uptime |awk '{print $12}'
  uptime |awk '{print $10}'
 pip show tensorflow
+
 
 GPU:
 glxinfo    will give you all available OpenGL information for the graphics processor, including its vendor name, if the drivers are correctly installed.
@@ -21,7 +22,11 @@ nvclock
 cat /proc/driver/nvidia/gpus/0/information
 https://www.tensorflow.org/versions/r0.7/how_tos/using_gpu/index.html
 
+
 nohup python neural_style.py --content /opt/practice/neural-style.me.fork/data/source/kk/psb1.jpeg --styles /opt/practice/neural-style.me.fork/data/style/??? --output /opt/practice/neural-style.me.fork/data/out/kk/pbs1.sty21.out.ite200  --checkpoint-iterations 10 --checkpoint-output /opt/practice/neural-style.me.fork/data/outck/kk/pbs1.sty21.out.%s.jpg   --iterations 200
+
+sh startstyle.sh kkbm/psb1.jpeg 1-style.jpg 3
+
 
 
 git diff --word-diff=color
