@@ -25,5 +25,5 @@ nohup python neural_style.py --content /opt/practice/neural-style.me.fork/data/s
 
 
 git diff --word-diff=color
-
+git diff --color-words
 
