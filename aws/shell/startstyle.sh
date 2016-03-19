@@ -31,8 +31,10 @@ cd $programepath
 
 ldconfig /usr/local/cuda/lib64
 
-nohup python neural_style.py --content $root'source/'$1   --styles $root'style/'$2   --output $root'out/'$1.$2.$3.jpg       --checkpoint-iterations 10 --checkpoint-output $root'outck/'$1.$2.%s.jpg   --iterations $3  &
+#nohup 
+python neural_style.py --content $root'source/'$1   --styles $root'style/'$2   --output $root'out/'$1.$2.$3.jpg       --checkpoint-iterations 10 --checkpoint-output $root'outck/'$1.$2.%s.jpg   --iterations $3  
+#&
 
 pwd
-tail -f nohup.out
+#tail -f nohup.out
 fi

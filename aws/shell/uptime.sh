@@ -1,4 +1,3 @@
-ubuntu@ip-172-30-0-107:~/crontab$ cat uptime.sh 
 #!/bin/bash
 
 upt=`uptime -p|awk '{print $2}'`
@@ -23,7 +22,7 @@ einfo 'mem' $mem;
 if [ $mem -gt 600 ]
 then einfo "mem $mem" "gt 600";
 
-	if  [ $upt -gt 54 ]
+	if  [ $upt -gt 53 ]
 	#if [ $upt -lt 54 ]
 	then   echo gt1 $upt >> /tmp/uptime
 	uptime|wall
@@ -38,7 +37,7 @@ exit
         einfo "mem $mem" "lt 600"
 	if [ $upt -gt 1 ]
 	then
-		if [ $upt2 -gt 54 ] 
+		if [ $upt2 -gt 53 ] 
 		then    echo gt2  $upt2 >> /tmp/uptime 
 		uptime|wall
 
@@ -48,6 +47,3 @@ exit
 		fi
 	fi
 fi
-ubuntu@ip-172-30-0-107:~/crontab$ uptime -p; uptime -s ;uptime
-up 3 minutes
-
