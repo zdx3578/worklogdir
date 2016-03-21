@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [[ -z `uptime -p|awk '{print $6}'` ]]; 
+if [ -z `uptime -p|awk '{print $6}'` ] 
 then 
-	if  [[ -z `uptime -p|awk '{print $4}'` ]]; 
+	if  [ -z `uptime -p|awk '{print $4}'` ]
 	then 
 	uptm=`uptime -p|awk '{print $2}'`
 	else
