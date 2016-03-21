@@ -10,9 +10,11 @@ ipython notebook --ip=0.0.0.0 --no-browser
 
  kill   -9    `ps -ef|grep -i xvnc|grep -v grep  |awk '{print $2}'`
 
-
+uptime |awk -F'load average: ' '{print $2}'|awk '{print $1}'
  uptime |awk '{print $12}'
  uptime |awk '{print $10}'
+
+
 pip show tensorflow
 
 
