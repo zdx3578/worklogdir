@@ -47,8 +47,8 @@ else  einfo 'if panduan, cpu lt 0.03 ' $cpu
 		echo gt1 $upt >> /tmp/uptime
 		uptime|wall
 		echo `date` '----------after 49 sec ; poweroff'|wall
-		sleep  50
-		/sbin/poweroff -fp
+		sleep  40
+		/sbin/poweroff ;sleep 3; /sbin/poweroff -f ; sleep 3; /sbin/poweroff -fp;
 		fi
 	else einfo 'uptime lt 52'  $uptm
 	fi
