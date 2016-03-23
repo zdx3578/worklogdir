@@ -33,7 +33,7 @@ echo "upt hour"------$upth- >> /tmp/uptime ;
 einfo 'uptime day ' $uptd 
 
 
-if [ `expr  $cpu \>  0.03 = 1 ]
+if [ `expr  $cpu \>  0.03` = 1 ]
 then  einfo 'if panduan, cpu gt 0.01;next exit ' $cpu  exit
 else  einfo 'if panduan, cpu lt 0.01 ' $cpu
     if [ $mem -lt 600 ]
