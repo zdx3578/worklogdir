@@ -34,7 +34,7 @@ nohup python neural_style.py --content /opt/practice/neural-style.me.fork/data/s
 
 sh startstyle.sh kkbm/psb1.jpeg 1-style.jpg 3
 sudo   sh startstyle.sh  kk/psb1.jpeg qbs2.jpg 1002
-
+sh startstyle.sh  ljsw/lzy.jpg zhuzi1.jpg 1001
 
 git diff --word-diff=color
 git diff --color-words
