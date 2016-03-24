@@ -39,3 +39,9 @@ sh startstyle.sh  ljsw/lzy.jpg zhuzi1.jpg 1001
 git diff --word-diff=color
 git diff --color-words
 
+
+rsync -e 'ssh -i  /Users/lmj/digits.pem ' -avzn  ubuntu@gpu.dpl.ren:/opt/practice/neural-style.me.fork/data/outck/ ./outck/
+pwd   /Users/lmj/develop/neural-stylezdx/date
+
+
+
