@@ -1,18 +1,15 @@
 
 if [ ! $2 ]
-then echo 'cmd $1=source(dir/pic) $2=style(pic) # $3=iterations' 
+then echo 'cmd $1=source(dir/pic) $2=style(pic) # $3=iterations $4=init|noinit $5 scalevalue  ' 
 else
 
 root='/opt/practice/neural-style.me.fork/data/'
 #root='/Users/lmj/develop/neural-style.me.fork/date/'
 
-#dir prepare
 user=`echo $1 |awk -F'/' '{print $1}'`
 userpic=`echo $1 |awk -F'/' '{print $2}'`
-#echo $user
 #$1= source dir and file  man/picname.jpg
 #$2= style file
-#iterations=$3
 
 mkdir -p  $root'style'
 mkdir -p  $root'out/'$user
@@ -24,14 +21,23 @@ programepath='/opt/practice/neural-style.me.fork'
 #programepath='/Users/lmj/develop/neural-style.me.fork/'
 cd $programepath
 
-#ldconfig /usr/local/cuda/lib64
-
-
 #echo "  python neural_style.py --content $root'source/'$user/$userpic   --styles $root'style/'$2   --output $root'out/'$user/$userpic.$2.$3.jpg   --print-iterations 20   --checkpoint-iterations 20 --checkpoint-output $root'outck'/$user/$userpic/$2/$userpic.$2.%s.jpg   --iterations $3  --initial $root'source/'$1  "
-
 rm nohup.out
 #nohup 
+
+
+#if $5
+#then
+
 python neural_style.py --content $root'source/'$user/$userpic   --styles $root'style/'$2   --output $root'out/'$user/$userpic.$2.jpg   --print-iterations 20   --checkpoint-iterations 20 --checkpoint-output $root'outck'/$user/$userpic/$2/$userpic.$2.%s.jpg   --initial $root'source/'$1 #&     --iterations $3 
+#elsif $4
+#then
+
+#elsif $3
+#then
+
+#fi
+
 
 
 #python neural_style.py --content $root'source/'$1   --styles $root'style/'$2   --output $root'out/'$1.$2.$3.jpg   --print-iterations 30   --checkpoint-iterations 30 --checkpoint-output $root'outck/'$1.$2.%s.jpg   --iterations $3
