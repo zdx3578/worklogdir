@@ -1,5 +1,5 @@
 
-if [ ! $2 ]
+if [ ! $3 ]
 then echo 'cmd $1=source(dir/pic) $2=style(pic) # $3=iterations $4=init|noinit $5 scalevalue  ' 
 else
 
@@ -29,7 +29,7 @@ rm nohup.out
 #if $5
 #then
 
-python neural_style.py --content $root'source/'$user/$userpic   --styles $root'style/'$2   --output $root'out/'$user/$userpic.$2.jpg   --print-iterations 20   --checkpoint-iterations 20 --checkpoint-output $root'outck'/$user/$userpic/$2/$userpic.$2.%s.jpg   --initial $root'source/'$1 #&     --iterations $3 
+python neural_style.py --content $root'source/'$user/$userpic   --styles $root'style/'$2   --output $root'out/'$user/$userpic.$2.jpg   --print-iterations 20   --checkpoint-iterations 20 --checkpoint-output $root'outck'/$user/$userpic/$2/$userpic.$2.%s.jpg        --iterations $3   --initial $root'source/'$1   --style-scales 0.2 
 #elsif $4
 #then
 
