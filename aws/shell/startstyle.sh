@@ -30,7 +30,7 @@ rm nohup.out
 
 runcmd="python neural_style.py --content $root"'source/'"$user/$userpic   --styles $root"'style/'"$2   --output $root"'out/'"$user/$userpic.$2.jpg   --print-iterations 20   --checkpoint-iterations 20 --checkpoint-output $root"'outck/'"$user/$userpic/$2/$userpic.$2.%s.jpg        --iterations $3   --style-scales 0.5   --content-weight 25 "   # --initial $root'source/'$1   --style-scales 0.2 
 
-echo $runcmd >> $root'outck'/$user/$userpic/$2/$userpic.$2.`date +%F%T`.cmd
+echo $runcmd >> $root'outck'/$user/$userpic/$2/$userpic.$2.`date +%F%T`.cmd.txt
 
 $runcmd
 
