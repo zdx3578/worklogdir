@@ -40,17 +40,17 @@ else  einfo 'if panduan, cpu lt 0.03 ' $cpu
     then        einfo "mem $mem" "lt 600; next  exit"
     		exit
     else einfo "mem $mem" "gt 600";
-	if  [ $uptm -gt 52 ]
-	then einfo 'uptim gt 52' $uptm  
-		if [ $uptm -lt 55 ]
-		then einfo 'uptim lt 55'  $uptm
+	if  [ $uptm -gt 54 ]
+	then einfo 'uptim gt 54' $uptm  
+		if [ $uptm -lt 57 ]
+		then einfo 'uptim lt 57'  $uptm
 		echo gt1 $upt >> /tmp/uptime
 		uptime|wall
 		echo `date` '----------after 49 sec ; poweroff'|wall
 		sleep  40
 		/sbin/poweroff ;sleep 3; /sbin/poweroff -f ; sleep 3; /sbin/poweroff -fp;
 		fi
-	else einfo 'uptime lt 52'  $uptm
+	else einfo 'uptime lt 54'  $uptm
 	fi
     fi
 fi
