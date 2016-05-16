@@ -1,0 +1,27 @@
+wget https://cmake.org/files/v3.4/cmake-3.4.3-Linux-x86_64.sh
+./cmake-3.4.3-Linux-x86_64
+cd cmake-3.4.3-Linux-x86_64
+
+follow https://github.com/bulletphysics/bullet3
+cd build3
+./premake4_linux gmake or
+./premake4_linux64 gmake
+cd gmake
+make
+!! run : sudo make install
+
+sudo apt-get install libopenal-dev
+
+ref http://gamedev.stackexchange.com/questions/111203/undefined-reference-to-std-throw-out-of-range-fmt
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get update
+sudo apt-get install gcc-4.9 g++-4.9
+
+wget http://www.sfml-dev.org/files/SFML-2.3.2-linux-gcc-64-bit.tar.gz
+tar -zxvf SFML-2.3.2-linux-gcc-64-bit.tar.gz
+export SFML_ROOT=/opt/practice/pge/SFML-2.3.2/
+cd bin
+./cmake /opt/practice/pge/PGE/pge/
+make
+
+and will ok!
