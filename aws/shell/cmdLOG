@@ -2,6 +2,11 @@
 
 grep Episode  work/gymexperiments/nohup.out |  grep -E "reward [0-9][0-9][0-9]"  |      grep -E "reward ?. [0-9]*"e
 
+
+ssh -i  /Users/lmj/seoul.pem ubuntu@dpl.ren "ssh -i digits.pem ubuntu@e.dpl.ren 'tail work/modular_rl-2p/nohup.out -f ' "
+
+
+
 xvfb-run -s "-screen 0 800x600x24" bash
 
 sudo    cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
