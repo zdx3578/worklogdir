@@ -7,6 +7,11 @@ ssh -i  /Users/lmj/seoul.pem ubuntu@dpl.ren "ssh -i digits.pem ubuntu@e.dpl.ren 
 
 
 
+export DOCKER_OPTS="-H $DOCKER_HOST --tls --tlskey $DOCKER_CERT_PATH/server-key.pem    --tlscert $DOCKER_CERT_PATH/server.pem --tlsverify --tlscacert $DOCKER_CERT_PATH/ca.pem "
+alias docker="docker $DOCKER_OPTS "
+
+
+
 xvfb-run -s "-screen 0 800x600x24" bash
 
 sudo    cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
