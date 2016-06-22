@@ -1,0 +1,14 @@
+wget https://www.roboti.us/getid/getid_linux
+    2  chmod +x getid_linux 
+
+
+sudo   apt-get install -y python-numpy python-dev cmake zlib1g-dev libjpeg-dev xvfb libav-tools xorg-dev python-opengl libboost-all-dev libsdl2-dev swig  git   libopenblas-dev liblapack-dev  unzip   libhdf5-dev  python-pip
+
+   11  sudo pip install keras theano tabulate numpy  scipy  h5py
+   12  sudo   pip install --upgrade pip
+
+
+   12  sudo   pip install -e .
+   13  sudo apt-get install python-pip
+   14  sudo   pip install -e .
+   15  sudo  pip install -e '.[mujoco]'
