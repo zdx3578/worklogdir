@@ -1,5 +1,19 @@
 
 
+
+
+
+
+
+
+ source activate rllab
+  336  python sandbox/vime/experiments/run_trpo_expl.py
+  337  export PYTHONPATH=./
+  338  python sandbox/vime/experiments/run_trpo_expl.py
+  339  xvfb-run -s "-screen 0 1400x900x24" bash
+
+swap  http://ncwcl.blog.51cto.com/36545/200376
+
 grep Episode  work/gymexperiments/nohup.out |  grep -E "reward [0-9][0-9][0-9]"  |      grep -E "reward ?. [0-9]*"e
 
 
@@ -58,5 +72,7 @@ git diff --color-words
 rsync -e 'ssh -i  /Users/lmj/digits.pem ' -avzn  ubuntu@gpu.dpl.ren:/opt/practice/neural-style.me.fork/data/outck/ ./outck/
 pwd   /Users/lmj/develop/neural-stylezdx/date
 
+
+export PYTHONPATH=
 
 
