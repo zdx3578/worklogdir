@@ -8,10 +8,10 @@ echo --------2 a
 echo; 
 echo --------3 c
 
-rsync -e 'ssh -i  /Users/lmj/digits.pem ' -avz  ubuntu@54.210.120.4:/home/ubuntu/work/rllab/data/local/trpo-expl/trpo-expl_2016_06_29_01_56_06_0001/gym_log/*.mp4 /Users/lmj/Documents/trainout/mjk/modelupvime4/ &
+rsync -e 'ssh -i  /Users/lmj/digits.pem ' -avz  ubuntu@54.82.205.118:/home/ubuntu/work/rllab/data/local/trpo-expl/trpo-expl_2016_07_07_09_50_55_0001/gym_log/*.mp4 /Users/lmj/Documents/trainout/mjk/modelupvime7/ &
 
 
-#rsync -e 'ssh -i  /Users/lmj/digits.pem ' -avz  ubuntu@c.dpl.ren:/home/ubuntu/work/out/modleup11/.dir/*.mp4 /Users/lmj/Documents/trainout/mjk/modelup11.c/  &
+#rsync -e 'ssh -i  /Users/lmj/digits.pem ' -avz  ubuntu@54.210.120.4:/home/ubuntu/work/out/modelup1516/.dir/*.mp4 /Users/lmj/Documents/trainout/mjk/modelup1516/  &
 echo; echo --------4
 
 #rsync -e 'ssh -i  /Users/lmj/digits.pem ' -avz  ubuntu@b.dpl.ren:/home/ubuntu/work/out/modlewalk1/.dir/*.mp4 /Users/lmj/Documents/trainout/mjk/modelwalk2/ &
