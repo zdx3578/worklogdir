@@ -2,6 +2,19 @@
 
 
 
+install   ref  https://github.com/BVLC/caffe/wiki/Caffe-on-EC2-Ubuntu-14.04-Cuda-7
+
+sudo apt-get update
+sudo apt-get install -y opencl-headers build-essential protobuf-compiler \
+    libprotoc-dev libboost-all-dev libleveldb-dev hdf5-tools libhdf5-serial-dev \
+    libopencv-core-dev  libopencv-highgui-dev libsnappy-dev libsnappy1 \
+    libatlas-base-dev cmake libstdc++6-4.8-dbg libgoogle-glog0 libgoogle-glog-dev \
+    libgflags-dev liblmdb-dev git python-pip gfortran
+
+cd python
+for req in $(cat requirements.txt); do sudo pip install $req; done
+
+
 
 
 
