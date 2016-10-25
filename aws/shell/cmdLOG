@@ -16,6 +16,10 @@ for req in $(cat requirements.txt); do sudo pip install $req; done
 
 
 
+for req in $(cat requirements.txt); do  pip install $req; done
+
+
+
 
 
 
@@ -39,6 +43,36 @@ alias docker="docker $DOCKER_OPTS "
 
 ubuntu docker:
 sudo service docker start
+
+sudo  docker run -v $(pwd)/InfoGAN:/InfoGAN  -v $(pwd)/celeball/img_align_celeba/img_align_celeba:/InfoGAN/celebA  -w /InfoGAN -it -p 8888:8888 infogan/dcganpipok
+
+
+mac vm:   docker run -v $(pwd)/InfoGAN:/InfoGAN -w /InfoGAN -it -p 8888:8888  infogan2
+docker run -v $(pwd)/DCGAN:/DCGAN -w /DCGAN -it -p 8888:8888  infogan2
+
+docker run -v $(pwd)/InfoGAN.nhdaly.me:/InfoGAN -w /InfoGAN -it -p 8888:8888  infogan2
+PYTHONPATH='.'  python  run_svhn.py
+
+source activate tensorflow
+PYTHONPATH='.'  python launchers/run_mnist_exp.py
+
+PYTHONPATH='.'  python run_svhn.py 
+
+
+
+gpu:   sudo  nvidia-docker run -it -p 8888:8888 gcr.io/tensorflow/tensorflow:latest-gpu  /bin/bash
+sudo  docker run -v $(pwd)/InfoGAN:/InfoGAN  -v $(pwd)/celeba/img_align_celeba:/InfoGAN/celebA  -w /InfoGAN -it -p 8888:8888 gcr.io/tensorflow/tensorflow:latest-gpu  /bin/bash
+
+
+
+PYTHONPATH='.'  python launchers/run_mnist_exp.py
+
+
+sudo docker  ps -a  -l
+ sudo docker commit 217f6445669d infogan/dcganpip
+
+
+
 
 
 
@@ -73,6 +107,8 @@ https://www.tensorflow.org/versions/r0.7/how_tos/using_gpu/index.html
 sudo ldconfig /usr/local/cuda/lib64
 
 nvidia-smi -q -d UTILIZATION
+watch  'nvidia-smi -q -d UTILIZATION'
+watch  'nvidia-smi -q -d UTILIZATION'
 
 
 
